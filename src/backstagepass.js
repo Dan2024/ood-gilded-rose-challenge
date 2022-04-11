@@ -1,12 +1,6 @@
 const Item = require('./item.js')
 
 class BackStagePass extends Item {
-  // constructor(name, sellIn, quality) {
-  //   this.name = name
-  //   this.sellIn = sellIn
-  //   this.quality = quality
-  // }
-
   update() {
     this.sellIn--
 
