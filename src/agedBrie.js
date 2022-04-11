@@ -1,11 +1,13 @@
-class AgedBrie {
-  constructor(name, sellIn, quality) {
-    this.name = name
-    this.sellIn = sellIn
-    this.quality = quality
-  }
+const Item = require('./item.js')
 
-  update(item) {
+class AgedBrie extends Item {
+  // constructor(name, sellIn, quality) {
+  //   this.name = name
+  //   this.sellIn = sellIn
+  //   this.quality = quality
+  // }
+
+  update() {
     this.sellIn--
 
     if (this.quality < 50) this.quality++

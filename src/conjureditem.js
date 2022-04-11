@@ -1,9 +1,11 @@
-class ConjuredItem {
-  constructor(name, sellIn, quality) {
-    this.name = name
-    this.sellIn = sellIn
-    this.quality = quality
-  }
+const Item = require('./item.js')
+
+class ConjuredItem extends Item {
+  // constructor(name, sellIn, quality) {
+  //   this.name = name
+  //   this.sellIn = sellIn
+  //   this.quality = quality
+  // }
 
   update() {
     this.sellIn--
