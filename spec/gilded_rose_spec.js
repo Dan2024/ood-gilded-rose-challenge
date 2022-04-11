@@ -1,4 +1,6 @@
-var { Shop, Item } = require('../src/gilded_rose.js')
+const Shop = require('../src/gildedRose.js')
+const Item = require('../src/item.js')
+
 describe('Gilded Rose', function () {
   describe('updateQuality()', function () {
     it('should push an item to the items array and depricate the sellIn and quality values by 1 ', function () {
