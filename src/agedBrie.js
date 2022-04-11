@@ -1,10 +1,16 @@
 class AgedBrie {
+  constructor(name, sellIn, quality) {
+    this.name = name
+    this.sellIn = sellIn
+    this.quality = quality
+  }
+
   update(item) {
-    item.sellIn--
+    this.sellIn--
 
-    if (item.quality < 50) item.quality++
+    if (this.quality < 50) this.quality++
 
-    if (item.sellIn < 0 && item.quality < 50) item.quality++
+    if (this.sellIn < 0 && this.quality < 50) this.quality++
   }
 }
 
