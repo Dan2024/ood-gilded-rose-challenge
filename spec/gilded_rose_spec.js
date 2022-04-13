@@ -125,6 +125,30 @@ describe('Gilded Rose', function () {
         expect(items[0].quality).toEqual(8)
       })
     })
+
+    describe('Conjured Items', function () {
+      it('conjured items quality dont go below 0', function () {
+        const gildedRose = new Shop([
+          new ConjuredItem('Conjured Mana Cake', 10, 1)
+        ])
+        const items = gildedRose.updateQuality()
+
+        expect(items[0].sellIn).toEqual(9)
+        expect(items[0].quality).toEqual(0)
+      })
+    })
+
+    describe('Conjured Items', function () {
+      it('conjured items degrade twice as fast past sell by date', function () {
+        const gildedRose = new Shop([
+          new ConjuredItem('Conjured Mana Cake', 0, 10)
+        ])
+        const items = gildedRose.updateQuality()
+
+        expect(items[0].sellIn).toEqual(-1)
+        expect(items[0].quality).toEqual(6)
+      })
+    })
   })
 })
 
